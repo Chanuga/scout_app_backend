@@ -8,9 +8,9 @@ const router = express.Router();
 router.get('/', getAllCarousel);
 
 //add a new post
-router.post('/', requireAuth, saveCarousel);
+router.post('/', requireAuth , saveCarousel);
 
 //delete a new post
-router.post('/delete/:id', requireAuth, deleteCarousel);
+router.post('/delete/:id', requireAuth , deleteCarousel);
 
 export default router;

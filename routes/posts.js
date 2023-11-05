@@ -14,12 +14,12 @@ router.get('/', getAllPosts);
 router.get('/:id', getPostByID);
 
 //add a new post
-router.post('/', requireAuth, savePost);
+router.post('/', requireAuth , savePost);
 
 //delete a new post
-router.post('/delete/:id', requireAuth, deletePost);
+router.post('/delete/:id', requireAuth , deletePost);
 
 //edit a new post
-router.put('/:id', requireAuth, updatePost);
+router.put('/:id', requireAuth , updatePost);
 
 export default router;
