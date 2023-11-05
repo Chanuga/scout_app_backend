@@ -1,6 +1,7 @@
 import express from "express";
 import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import cors from "cors"
 import postsRoutes from './routes/posts.js'
 import carouselRoutes from './routes/carousel.js'
 import userRoutes from './routes/user.js'
@@ -11,6 +12,7 @@ dotenv.config();
 const app = express();
 
 // middleware
+app.use(cors());
 app.use(express.json()) // to access to request body of requests
 
 //routes
