@@ -1,5 +1,5 @@
 import  jwt from 'jsonwebtoken';
-import { UserModel } from '../models/userModel.js';
+import { UserModel } from '../models/UserModel.js';
 
 export const requireAuth = async (req, res, next) => {
     // verify user is authenticated

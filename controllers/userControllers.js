@@ -1,4 +1,4 @@
-import { UserModel } from '../models/userModel.js'
+import { UserModel } from '../models/UserModel.js'
 import bcrypt from 'bcrypt';
 import validator from 'validator';
 import jwt from 'jsonwebtoken'
@@ -32,7 +32,7 @@ export const loginUser = async (req, res) => {
         const token = await createToken(user._id)
 
         res.status(200).json({ email, token });
-        
+
     } catch (error) {
         res.status(400).json({msg: error.message})
     }
