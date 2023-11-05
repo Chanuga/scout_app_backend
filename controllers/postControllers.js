@@ -1,4 +1,4 @@
-import { PostModel } from '../models/PostModel.js'
+import { PostModel } from '../models/postModel.js'
 
 // get all
 export const getAllPosts = async (req, res) => {
