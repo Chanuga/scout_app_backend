@@ -1,6 +1,6 @@
 import express from 'express';
 import { deleteCarousel, getAllCarousel, saveCarousel } from '../controllers/carouselControllers.js';
-import { requireAuth } from '../middleware/requireauth.js';
+import { requireAuth } from '../middleware/requireAuth.js';
 
 const router = express.Router();
 
