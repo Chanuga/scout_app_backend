@@ -20,6 +20,11 @@ app.use('/api/posts', postsRoutes) // post routes
 app.use('/api/carousel', carouselRoutes) // carousel routes
 app.use('/api/user', userRoutes) // user routes
 
+// Catch-all route for unmatched routes
+app.use((req, res, next) => {
+    res.status(404).send('Not Found');
+});
+
 //listen to requests
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
